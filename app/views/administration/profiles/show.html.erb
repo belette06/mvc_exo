@@ -1,0 +1,23 @@
+<h1>
+	<%= @profile.id %>
+</h1>
+
+
+<div>
+
+    Email :<%= @profile.user.email.to_s %>
+
+
+    Id du user : <%= @profile.user.id %>
+
+    Id du profile : <%= @profile.id %>
+
+  <%= link_to send_email_administration_profile_path(@profile) do %>
+    Envoyer un email à l'utilisateur
+  <% end %>
+
+  <%= link_to 'Back', :back, class:"btn btn-danger p-3 text-white" %>
+
+</div>
+
+
